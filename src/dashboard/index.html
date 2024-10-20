@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skoda®Studio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #046863;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .form-group img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Skoda®Studio</h1>
+  <div class="container">
+    <form id="configForm">
+      <div class="form-group">
+        <label for="WELCOME_CHANNEL_ID">WELCOME_CHANNEL_ID</label>
+        <input type="text" id="WELCOME_CHANNEL_ID" name="WELCOME_CHANNEL_ID">
+      </div>
+
+      <div class="form-group">
+        <label for="MEMBER_ROLE_ID">MEMBER_ROLE_ID</label>
+        <input type="text" id="MEMBER_ROLE_ID" name="MEMBER_ROLE_ID">
+      </div>
+
+      <div class="form-group">
+        <label for="BOT_ROLE_ID">BOT_ROLE_ID</label>
+        <input type="text" id="BOT_ROLE_ID" name="BOT_ROLE_ID">
+      </div>
+
+      <div class="form-group">
+        <label for="SERVER_IMAGE">SERVER_IMAGE</label>
+        <input type="text" id="SERVER_IMAGE" name="SERVER_IMAGE">
+        <img id="serverImagePreview" src="" alt="Server Image">
+      </div>
+
+      <div class="form-group">
+        <label for="Channel_ID_Notifications_Create_Room">Channel_ID_Notifications_Create_Room</label>
+        <input type="text" id="Channel_ID_Notifications_Create_Room" name="Channel_ID_Notifications_Create_Room">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_delete_room">channel_id_notifications_delete_room</label>
+        <input type="text" id="channel_id_notifications_delete_room" name="channel_id_notifications_delete_room">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Update_room">channel_id_notifications_Update_room</label>
+        <input type="text" id="channel_id_notifications_Update_room" name="channel_id_notifications_Update_room">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_delete_message">channel_id_notifications_delete_message</label>
+        <input type="text" id="channel_id_notifications_delete_message" name="channel_id_notifications_delete_message">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Edit_message">channel_id_notifications_Edit_message</label>
+        <input type="text" id="channel_id_notifications_Edit_message" name="channel_id_notifications_Edit_message">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Member_role">channel_id_notifications_Member_role</label>
+        <input type="text" id="channel_id_notifications_Member_role" name="channel_id_notifications_Member_role">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Removed_role">channel_id_notifications_Removed_role</label>
+        <input type="text" id="channel_id_notifications_Removed_role" name="channel_id_notifications_Removed_role">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Created_role">channel_id_notifications_Created_role</label>
+        <input type="text" id="channel_id_notifications_Created_role" name="channel_id_notifications_Created_role">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Deleted_role">channel_id_notifications_Deleted_role</label>
+        <input type="text" id="channel_id_notifications_Deleted_role" name="channel_id_notifications_Deleted_role">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Ban_member">channel_id_notifications_Ban_member</label>
+        <input type="text" id="channel_id_notifications_Ban_member" name="channel_id_notifications_Ban_member">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Join_member">channel_id_notifications_Join_member</label>
+        <input type="text" id="channel_id_notifications_Join_member" name="channel_id_notifications_Join_member">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Kick_member">channel_id_notifications_Kick_member</label>
+        <input type="text" id="channel_id_notifications_Kick_member" name="channel_id_notifications_Kick_member">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_Leave_member">channel_id_notifications_Leave_member</label>
+        <input type="text" id="channel_id_notifications_Leave_member" name="channel_id_notifications_Leave_member">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_thread_Create">channel_id_notifications_thread_Create</label>
+        <input type="text" id="channel_id_notifications_thread_Create" name="channel_id_notifications_thread_Create">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_thread_Delete">channel_id_notifications_thread_Delete</label>
+        <input type="text" id="channel_id_notifications_thread_Delete" name="channel_id_notifications_thread_Delete">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_voice_Join">channel_id_notifications_voice_Join</label>
+        <input type="text" id="channel_id_notifications_voice_Join" name="channel_id_notifications_voice_Join">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_voice_Leave">channel_id_notifications_voice_Leave</label>
+        <input type="text" id="channel_id_notifications_voice_Leave" name="channel_id_notifications_voice_Leave">
+      </div>
+
+      <div class="form-group">
+        <label for="channel_id_notifications_voice_Switch">channel_id_notifications_voice_Switch</label>
+        <input type="text" id="channel_id_notifications_voice_Switch" name="channel_id_notifications_voice_Switch">
+      </div>
+
+      <button type="submit" class="btn">Save Config</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('/config.json')
+        .then(response => response.json())
+        .then(data => {
+
+            document.getElementById('WELCOME_CHANNEL_ID').value = data.WELCOME_CHANNEL_ID;
+          document.getElementById('MEMBER_ROLE_ID').value = data.MEMBER_ROLE_ID;
+          document.getElementById('BOT_ROLE_ID').value = data.BOT_ROLE_ID;
+          document.getElementById('SERVER_IMAGE').value = data.SERVER_IMAGE;
+          document.getElementById('serverImagePreview').src = data.SERVER_IMAGE;
+          document.getElementById('Channel_ID_Notifications_Create_Room').value = data.Channel_ID_Notifications_Create_Room;
+          document.getElementById('channel_id_notifications_delete_room').value = data.channel_id_notifications_delete_room;
+          document.getElementById('channel_id_notifications_Update_room').value = data.channel_id_notifications_Update_room;
+          document.getElementById('channel_id_notifications_delete_message').value = data.channel_id_notifications_delete_message;
+          document.getElementById('channel_id_notifications_Edit_message').value = data.channel_id_notifications_Edit_message;
+          document.getElementById('channel_id_notifications_Member_role').value = data.channel_id_notifications_Member_role;
+          document.getElementById('channel_id_notifications_Removed_role').value = data.channel_id_notifications_Removed_role;
+          document.getElementById('channel_id_notifications_Created_role').value = data.channel_id_notifications_Created_role;
+          document.getElementById('channel_id_notifications_Deleted_role').value = data.channel_id_notifications_Deleted_role;
+          document.getElementById('channel_id_notifications_Ban_member').value = data.channel_id_notifications_Ban_member;
+          document.getElementById('channel_id_notifications_Join_member').value = data.channel_id_notifications_Join_member;
+          document.getElementById('channel_id_notifications_Kick_member').value = data.channel_id_notifications_Kick_member;
+          document.getElementById('channel_id_notifications_Leave_member').value = data.channel_id_notifications_Leave_member;
+          document.getElementById('channel_id_notifications_thread_Create').value = data.channel_id_notifications_thread_Create;
+          document.getElementById('channel_id_notifications_thread_Delete').value = data.channel_id_notifications_thread_Delete;
+          document.getElementById('channel_id_notifications_voice_Join').value = data.channel_id_notifications_voice_Join;
+          document.getElementById('channel_id_notifications_voice_Leave').value = data.channel_id_notifications_voice_Leave;
+          document.getElementById('channel_id_notifications_voice_Switch').value = data.channel_id_notifications_voice_Switch;
+        });
+
+      document.getElementById('configForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const configData = Object.fromEntries(formData.entries());
+
+        fetch('/update-config', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(configData)
+        })
+        .then(response => response.json())
+        .then(data => {
+          alert(data.message);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      });
+
+      document.getElementById('SERVER_IMAGE').addEventListener('input', function () {
+        document.getElementById('serverImagePreview').src = this.value;
+      });
+    });
+  </script>
+</body>
+</html>
