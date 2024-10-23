@@ -3,7 +3,6 @@ function startServer() {
   const fs = require('fs');
   const path = require('path');
   const app = express();
-  const port = 3000;
 
   const configPath = path.join(__dirname, '../../config.json');
   const indexPath = path.join(__dirname, 'index.html');
@@ -25,14 +24,12 @@ function startServer() {
   });
 
   app.post('/update-config', (req, res) => {
-
     fs.readFile(configPath, 'utf8', (err, data) => {
       if (err) {
         return res.status(500).send('Error reading config file');
       }
 
       const currentConfig = JSON.parse(data);
-
       const updatedConfig = {
         ...currentConfig,
         ...req.body,
@@ -47,7 +44,18 @@ function startServer() {
     });
   });
 
-  app.listen(port, () => {
+  fs.readFile(configPath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading config file:', err);
+      return;
+    }
+
+    const config = JSON.parse(data);
+    const port = config.port || 3000; 
+
+    app.listen(port, () => {
+      //console.log(`Server is running on port ${port}`);
+    });
   });
 }
 
