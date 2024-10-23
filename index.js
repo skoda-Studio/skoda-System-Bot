@@ -1,6 +1,5 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const { token, GUILD_ID } = require('./config.json');
-const port = 3000;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent ] });
 
