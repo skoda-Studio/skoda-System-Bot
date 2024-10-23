@@ -2,6 +2,8 @@
   "token": "Bot_Token",
   "GUILD_ID": "SERVER_id",
   "BOT_ID": "BOT_ID",
+    "port": 3000,
+  "otherConfig": "value",
   "WELCOME_CHANNEL_ID": "WELCOME_CHANNEL_ID",
   "MEMBER_ROLE_ID": "MEMBER_ROLE_ID",
   "BOT_ROLE_ID": "BOT_ROLE_ID",
